@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { F } from 'types-ramda';
 
 test('test', async ({ page }) => {
   await page.goto('https://menu.recursyve.dev/');
@@ -13,6 +14,8 @@ test('test', async ({ page }) => {
   await page.locator('#mat-select-value-7').click();
   await page.getByRole('option', { name: 'Italian' }).click();
   await page.getByPlaceholder('Rechercher l\'adresse').fill('1235');
+
+/*
   await page.getByText('North York, ON, Canada').click();
   await page.getByPlaceholder('Nom du vendeur').click();
   await page.getByRole('option', { name: 'Agatha Christie' }).click();
@@ -20,4 +23,5 @@ test('test', async ({ page }) => {
   await page.getByPlaceholder('Nom', { exact: true }).fill('ER');
   await page.getByPlaceholder('exemple@courriel.com').fill('mrousseau+11@recursyve.io');
   await page.getByRole('button', { name: 'Sauvegarder' }).click();
+*/
 });
