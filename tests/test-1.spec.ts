@@ -19,5 +19,5 @@ test('test', async ({ page }) => {
   await page.getByPlaceholder('Prénom').fill('Maxime');
   await page.getByPlaceholder('Nom', { exact: true }).fill('ER');
   await page.getByPlaceholder('exemple@courriel.com').fill('mrousseau+11@recursyve.io');
-  await page.getByRole('button', { name: 'Sauvegarder' });
+  await page.getByRole('button', { name: 'Sauvegarder' }).click();
 });
