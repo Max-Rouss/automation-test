@@ -1,0 +1,17 @@
+{
+  "name": "projet-qa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.45.1",
+    "@types/node": "^20.12.13"
+  },
+  "dependencies": {
+    "swagger-ui": "^5.17.14"
+  }
+}
