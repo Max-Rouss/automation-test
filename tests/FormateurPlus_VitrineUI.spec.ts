@@ -14,6 +14,7 @@ test('test', async ({ page }) => {
   - element is Enabled
   */
 
+
   //Find and check clickable locators
   await page.getByPlaceholder('Search').press('Tab');
   await page.getByPlaceholder('Search').click({trial: true});
@@ -46,6 +47,7 @@ test('test', async ({ page }) => {
   await page.getByRole('link', { name: 'Test your digital skills' }).click({trial: true});
 
 
+
   //responsive layout 2 (1536px)
   await page.setViewportSize({ width: 1535, height: 1080 });
   await page.pause();
@@ -70,6 +72,8 @@ test('test', async ({ page }) => {
   await page.getByRole('button', { name: 'Are you a company?' }).click({trial: true});
 
   await page.getByRole('heading', { name: 'logo' }).getByRole('button').click();
+
+
 
   //responsive layout 3 (768px)
   await page.setViewportSize({ width: 767, height: 1080 });
