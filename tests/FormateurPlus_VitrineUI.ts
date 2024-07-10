@@ -4,7 +4,7 @@ test('test', async ({ page }) => {
   //initial config, responsive layout 1
   await page.goto('https://formateur-plus.vitrine.recursyve.dev/');
   await page.setViewportSize({ width: 1920, height: 1080 });
-  await page.pause(500);
+  await page.pause();
 
   /*locator.click() ensures 
   - that locator resolves to exactly one element
@@ -47,16 +47,16 @@ test('test', async ({ page }) => {
 
   //responsive layout 2 (1536px)
   await page.setViewportSize({ width: 1535, height: 1080 });
-  await page.pause(500);
+  await page.pause();
   await page.getByRole('button').nth(0).press('Tab');
   await page.getByRole('button').nth(0).click();
 
   //Find and check clickable locators in hamburger menu
-  
+
 
   //responsive layout 3 (768px)
   await page.setViewportSize({ width: 767, height: 1080 });
-  await page.pause(500);
+  await page.pause();
   await page.getByRole('button').nth(0).press('Tab');
   await page.getByRole('button').nth(0).click();
 
@@ -78,6 +78,6 @@ test('test', async ({ page }) => {
 
   await page.getByRole('heading', { name: 'logo' }).getByRole('button').click();
 
-  await page.pause(500);
+  await page.pause();
   //await page.close()
 });
