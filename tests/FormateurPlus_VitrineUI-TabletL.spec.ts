@@ -40,8 +40,8 @@ test('test', async ({ page }) => {
   
     //Find and check clickable locators in hamburger menu
     await page.getByRole('button').nth(0).click();
-    await page.getByRole('textbox', { name: 'Recherche' }).nth(1).press('Tab');
-    await page.getByRole('textbox', { name: 'Recherche' }).nth(1).click({trial: true});
+    await page.getByRole('textbox', { name: 'Rechercher' }).nth(1).press('Tab');
+    await page.getByRole('textbox', { name: 'Rechercher' }).nth(1).click({trial: true});
   
     await page.getByRole('button').nth(8).press('Tab');
     await page.getByRole('button').nth(8).click();
