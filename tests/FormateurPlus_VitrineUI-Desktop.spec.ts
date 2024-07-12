@@ -45,6 +45,6 @@ test('Formateur-Plus', async ({ page }) => {
   await page.getByRole('link', { name: 'Testez vos compétences numé' }).press('Tab');
   await page.getByRole('link', { name: 'Testez vos compétences numé' }).click({trial: true});
 
-  //await page.close()
-  
+  await page.close()
+
 });

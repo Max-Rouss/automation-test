@@ -18,12 +18,6 @@ test('test', async ({ page }) => {
   await page.getByPlaceholder('Rechercher').press('Tab');
   await page.getByPlaceholder('Rechercher').click({trial: true});
 
-  await page.getByRole('button', { name: 'Vous êtes une entreprise?' }).press('Tab');
-  await page.getByRole('button', { name: 'Vous êtes une entreprise?' }).click({trial: true});
-
-  await page.getByRole('button', { name: 'Mon espace' }).press('Tab');
-  await page.getByRole('button', { name: 'Mon espace' }).click({trial: true});
-
   await page.getByRole('button', { name: 'Tous' }).press('Tab');
   await page.getByRole('button', { name: 'Tous' }).click({trial: true});
 
@@ -48,8 +42,8 @@ test('test', async ({ page }) => {
 
   //Find and check clickable locators in hamburger menu
   await page.getByRole('button').nth(0).click();
-  await page.getByRole('textbox', { name: 'Search' }).nth(0).press('Tab');
-  await page.getByRole('textbox', { name: 'Search' }).nth(0).click({trial: true});
+  await page.getByRole('textbox', { name: 'Recherche' }).nth(0).press('Tab');
+  await page.getByRole('textbox', { name: 'Recherche' }).nth(0).click({trial: true});
 
   await page.getByRole('button').nth(5).press('Tab');
   await page.getByRole('button').nth(5).click();
@@ -68,4 +62,6 @@ test('test', async ({ page }) => {
   await page.getByRole('heading', { name: 'logo' }).getByRole('button').click();
 
   await page.pause();
+  await page.close()
+
 });

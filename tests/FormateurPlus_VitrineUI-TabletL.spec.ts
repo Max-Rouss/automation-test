@@ -58,5 +58,7 @@ test('test', async ({ page }) => {
     await page.getByRole('button', { name: 'Vous êtes une entreprise?' }).click({trial: true});
   
     await page.getByRole('heading', { name: 'logo' }).getByRole('button').click();
-  
+    
+    await page.close()
+
 });
