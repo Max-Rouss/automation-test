@@ -1,12 +1,12 @@
 import { test, expect, type Page } from '@playwright/test';
 
 test('Formateur-Plus', async ({ page }) => {
-  //initial config, responsive layout 1
   await page.goto('https://formateur-plus.vitrine.recursyve.dev/');
   await page.setViewportSize({ width: 1920, height: 1080 });
   await page.pause();
 
-  /*locator.click() ensures 
+  /*
+  locator.click() ensures 
   - that locator resolves to exactly one element
   - element is Visible
   - element is Stable, as in not animating or completed animation
@@ -15,35 +15,36 @@ test('Formateur-Plus', async ({ page }) => {
   */
 
   //Find and check clickable locators
-  await page.getByPlaceholder('Search').press('Tab');
-  await page.getByPlaceholder('Search').click({trial: true});
+  await page.getByPlaceholder('Rechercher').press('Tab');
+  await page.getByPlaceholder('Rechercher').click({trial: true});
 
-  await page.getByRole('button', { name: 'Are you a company?' }).press('Tab');
-  await page.getByRole('button', { name: 'Are you a company?' }).click({trial: true});
+  await page.getByRole('button', { name: 'Vous êtes une entreprise?' }).press('Tab');
+  await page.getByRole('button', { name: 'Vous êtes une entreprise?' }).click({trial: true});
 
-  await page.getByRole('button', { name: 'My space' }).press('Tab');
-  await page.getByRole('button', { name: 'My space' }).click({trial: true});
+  await page.getByRole('button', { name: 'Mon espace' }).press('Tab');
+  await page.getByRole('button', { name: 'Mon espace' }).click({trial: true});
 
-  await page.getByRole('button', { name: 'All' }).press('Tab');
-  await page.getByRole('button', { name: 'All' }).click({trial: true});
+  await page.getByRole('button', { name: 'Tous' }).press('Tab');
+  await page.getByRole('button', { name: 'Tous' }).click({trial: true});
 
-  await page.getByRole('button', { name: 'Education' }).press('Tab');
-  await page.getByRole('button', { name: 'Education' }).click({trial: true});
+  await page.getByRole('button', { name: 'Éducation' }).press('Tab');
+  await page.getByRole('button', { name: 'Éducation' }).click({trial: true});
 
-  await page.getByRole('button', { name: 'Office' }).press('Tab');
-  await page.getByRole('button', { name: 'Office' }).click({trial: true});
+  await page.getByRole('button', { name: 'Bureautique' }).press('Tab');
+  await page.getByRole('button', { name: 'Bureautique' }).click({trial: true});
 
-  await page.getByRole('button', { name: 'On demand courses' }).press('Tab');
-  await page.getByRole('button', { name: 'On demand courses' }).click({trial: true});
+  await page.getByRole('button', { name: 'Cours à la carte' }).press('Tab');
+  await page.getByRole('button', { name: 'Cours à la carte' }).click({trial: true});
 
-  await page.getByRole('button', { name: 'Development package' }).press('Tab');
-  await page.getByRole('button', { name: 'Development package' }).click({trial: true});
+  await page.getByRole('button', { name: 'Forfait de perfectionnement' }).press('Tab');
+  await page.getByRole('button', { name: 'Forfait de perfectionnement' }).click({trial: true});
 
-  await page.getByRole('button', { name: 'Discover the package' }).press('Tab');
-  await page.getByRole('button', { name: 'Discover the package' }).click({trial: true});
+  await page.getByRole('button', { name: 'Découvrir le forfait' }).press('Tab');
+  await page.getByRole('button', { name: 'Découvrir le forfait' }).click({trial: true});
 
-  await page.getByRole('link', { name: 'Test your digital skills' }).press('Tab');
-  await page.getByRole('link', { name: 'Test your digital skills' }).click({trial: true});
-  
+  await page.getByRole('link', { name: 'Testez vos compétences numé' }).press('Tab');
+  await page.getByRole('link', { name: 'Testez vos compétences numé' }).click({trial: true});
+
   //await page.close()
+  
 });
